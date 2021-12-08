@@ -1,0 +1,187 @@
+body {
+	background: #fffdf6;
+	margin: 0;
+	font-family: 'Fira Sans', 'Arial', 'Verdana', sans-serif;
+	}
+
+
+h1 {
+		text-align: center;
+    padding: 1.2rem;
+		margin: auto;
+  	font-size: 50px;
+  	color: #4B504D;
+		background: #bacac3;
+		font-family: 'Niconne', cursive, 'Cormorant Garamond', 'Georgia', 'Baskerville', serif;
+		text-shadow: 1px 1px #fff;
+}
+
+h2 {
+	font-size: 15px;
+  color: #000;
+	margin: auto;
+	padding: 1.5rem;
+	padding-bottom: 2rem;
+	max-width: 550px;
+}
+
+.grid{
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(2,0.3fr);
+	grid-gap: 50px;
+	align-items: center;
+	justify-content: center;
+}
+
+.grid > article{
+	background: #fffefb;
+	border: none;
+	box-shadow: 3px 8px 8px 0px rgba(0,0,0,0.3);
+	border-radius: 20px;
+	text-align: center;
+	width: 380px;
+	transition: transform .3s;
+}
+
+
+.grid > article:hover{
+	transform: translateY(5px);
+	box-shadow: 2px 2px 26px 0px rgba(0,0,0,0.3);
+}
+
+.text{
+	padding: 0 20px 20px;
+}
+
+.text h3{
+	text-transform: uppercase;
+	color: #4B504D;
+	text-shadow: 1px 1px #bacac3;
+}
+
+.text button{
+	background: #4B504D;
+	border-radius: 20px;
+	border: none;
+	color: #fff;
+	text-shadow: 1px 1px #aa706a;
+	padding: 10px;
+	width: 100%;
+	font-weight: 600;
+	text-transform: uppercase;
+	cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+	background:#bacac3;
+}
+
+#map1 {
+  height: 250px;
+  width: 100%;
+  margin-top: 1.5rem;
+  border: 1px solid #999;
+}
+#map2 {
+    height: 250px;
+    width: 100%;
+    margin-top: 1.5rem;
+    border: 1px solid #999;
+}
+
+#map3 {
+    height: 250px;
+    width: 100%;
+    margin-top: 1.5rem;
+    border: 1px solid #999;
+}
+
+#map4 {
+    height: 250px;
+    width: 100%;
+    margin-top: 1.5rem;
+    border: 1px solid #999;
+}
+
+#map5 {
+    height: 250px;
+    width: 100%;
+    margin-top: 1.5rem;
+    border: 1px solid #999;
+}
+
+#map6 {
+    height: 250px;
+    width: 100%;
+    margin-top: 1.5rem;
+    border: 1px solid #999;
+}
+
+#map7 {
+    height: 250px;
+    width: 100%;
+    margin-top: 1.5rem;
+    border: 1px solid #999;
+}
+
+#map8 {
+    height: 250px;
+    width: 100%;
+    margin-top: 1.5rem;
+    border: 1px solid #999;
+}
+
+#map9 {
+    height: 250px;
+    width: 100%;
+    margin-top: 1.5rem;
+    border: 1px solid #999;
+}
+
+#map10 {
+    height: 250px;
+    width: 100%;
+    margin-top: 1.5rem;
+    border: 1px solid #999;
+}
+
+.soundtrack {
+	width: 60%;
+	height: 20px;
+}
+
+p {
+	margin: 0;
+	padding: 10px;
+}
+
+.leaflet-popup-content {
+    max-width: 150px;
+}
+
+footer {
+		margin-top: 50px;
+		color: #000;
+    background: #bacac3;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 890px) {
+	.grid{
+		grid-template-columns: repeat(1,1fr);
+			margin: auto;
+	}
+	.grid > article{
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.grid > article{
+		width: 300px;
+}
+
+}

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Language Cards</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Fira+Sans&family=Niconne&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="css/main.css">
+
+
+	</head>
+<body>
+
+<header>
+<h1>Top 10 Most Spoken Languages</h1>
+<h2> In the cards below, you will find the top 10 languages spoken worldwide. Each card includes the number of speakers worldwide, the genus, a button with audio on how to say “Hello, my name is” in that specific language, and a map displaying the places where that language is spoken. The maps show all the places, whether big or small, where that language is spoken at. The information for the maps was taken from the
+ <a href="https://www.cia.gov/the-world-factbook/field/languages/">CIA World Factbook</a>.
+ </h2>
+
+
+
+</header>
+
+	<div class="container">
+		<main class="grid">
+
+
+			<article>
+
+
+				<div class = "text">
+					<h3> #1 English </h3>
+					<p> <strong style= "color:#aa706a">1.3</strong> millions of speakers <br> <strong> Genus:</strong> Germanic </p>
+
+         <button id= "button1" class="play"> Hello, my name is </button>
+
+         <!-- audio 1 -->
+         <div id="audio1">
+            <p class="hellolang"> [he-loh mahy neym iz] </p>
+             <audio class="soundtrack" controls preload="auto">
+             	<source src="audio/english.mp3" type="audio/mp3">
+             	<source src="audio/english.ogg" type="audio/ogg">
+             </audio>
+           </div>
+
+            <div id="map1"></div>
+            <script src="js/lang.js"> </script>
+            <script src="js/places.js"> </script>
+
+                <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+              <script>
+
+              let lang1 = L.map('map1').setView([0.000,14.390], .4);
+
+              L.tileLayer('https://api.mapbox.com/styles/v1/sabriveit/ckws7lfzo0rnv14p9rcnpgroo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Ficml2ZWl0IiwiYSI6ImNrdzNyMzRhZTBwdnEydm1tazU5cDk5MGEifQ.-3VtP4s1ThLRJm5ybeqBnA', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 5
+              }).addTo(lang1);
+
+              for ( let i = 0; i < places1.length; i++ ) {
+                L.marker( [ places1[i].latitude, places1[i].longitude ])
+                .bindPopup( '<h3>' + places1[i].placeName + '</h3>'+'<section>'+places1[i].descrip+'</section>')
+                .addTo(lang1);
+              }
+
+</script>
+
+</div>
+</article>
+
+			<article>
+
+				<div class = "text">
+					<h3> #2 Mandarin </h3>
+					<p> <strong style= "color:#aa706a">1.1 </strong> millions of speakers <br> <strong> Genus:</strong> Chinese </p>
+					<button id= "button2" class="play"> 你好我的名字是 </button>
+
+          <!-- audio 2 -->
+          <div id="audio2">
+              <p class="hellolang"> [nǐhǎo wǒ de míngzi shì] </p>
+              <audio class="soundtrack" controls preload="auto">
+               <source src="audio/chinese.mp3" type="audio/mp3">
+               <source src="audio/chinese.ogg" type="audio/ogg">
+              </audio>
+            </div>
+
+          <div id="map2"></div>
+          <script src="js/lang.js"> </script>
+
+              <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+            <script>
+
+            let lang2 = L.map('map2').setView([7.610,133.744], 1);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/sabriveit/ckws7lfzo0rnv14p9rcnpgroo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Ficml2ZWl0IiwiYSI6ImNrdzNyMzRhZTBwdnEydm1tazU5cDk5MGEifQ.-3VtP4s1ThLRJm5ybeqBnA', {
+              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+              maxZoom: 15
+            }).addTo(lang2);
+
+            for ( let i = 0; i < places2.length; i++ ) {
+              L.marker( [ places2[i].latitude, places2[i].longitude ])
+              .bindPopup( '<h3>' + places2[i].placeName + '</h3>'+'<section>'+places2[i].descrip+'</section>')
+              .addTo(lang2);
+            }
+
+
+        </script>
+
+				</div>
+			</article>
+
+
+
+			<article>
+				<div class = "text">
+					<h3> #3 Hindi </h3>
+					<p> <strong style= "color:#aa706a">600</strong> millions of speakers <br> <strong> Genus:</strong> Indic </p>
+					<button id= "button3" class="play"> नमस्ते मेरा नाम है </button>
+
+          <!-- audio 3 -->
+          <div id="audio3">
+              <p class="hellolang"> [namaste mera naam hai] </p>
+              <audio class="soundtrack" controls preload="auto">
+               <source src="audio/hindi.mp3" type="audio/mp3">
+               <source src="audio/hindi.ogg" type="audio/ogg">
+              </audio>
+            </div>
+
+          <div id="map3"></div>
+          <script src="js/lang.js"> </script>
+
+              <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+            <script>
+
+            let lang3 = L.map('map3').setView([0.000,40.00], 0);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/sabriveit/ckws7lfzo0rnv14p9rcnpgroo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Ficml2ZWl0IiwiYSI6ImNrdzNyMzRhZTBwdnEydm1tazU5cDk5MGEifQ.-3VtP4s1ThLRJm5ybeqBnA', {
+              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+              maxZoom: 15
+            }).addTo(lang3);
+
+            for ( let i = 0; i < places3.length; i++ ) {
+              L.marker( [ places3[i].latitude, places3[i].longitude ])
+              .bindPopup( '<h3>' + places3[i].placeName + '</h3>'+'<section>'+places3[i].descrip+'</section>')
+              .addTo(lang3);
+            }
+        </script>
+
+
+				</div>
+			</article>
+
+
+      <article>
+        <div class = "text">
+          <h3> #4 Spanish </h3>
+          <p> <strong style= "color:#aa706a">543</strong> millions of speakers <br> <strong> Genus:</strong> Romance </p>
+          <button id= "button4" class="play"> Hola, mi nombre es </button>
+
+          <!-- audio 4 -->
+          <div id="audio4">
+              <p class="hellolang"> [oh-lah mee nohm-breh ehs] </p>
+              <audio class="soundtrack" controls preload="auto">
+               <source src="audio/spanish.mp3" type="audio/mp3">
+               <source src="audio/spanish.ogg" type="audio/ogg">
+              </audio>
+            </div>
+
+          <div id="map4"></div>
+          <script src="js/lang.js"> </script>
+
+              <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+            <script>
+
+            let lang4 = L.map('map4').setView([25.216,-33.286], 1);
+            L.tileLayer('https://api.mapbox.com/styles/v1/sabriveit/ckws7lfzo0rnv14p9rcnpgroo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Ficml2ZWl0IiwiYSI6ImNrdzNyMzRhZTBwdnEydm1tazU5cDk5MGEifQ.-3VtP4s1ThLRJm5ybeqBnA', {
+              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+              maxZoom: 15
+            }).addTo(lang4);
+
+            for ( let i = 0; i < places4.length; i++ ) {
+              L.marker([ places4[i].latitude, places4[i].longitude ])
+              .bindPopup( '<h3>' + places4[i].placeName + '</h3>'+'<section>'+places4[i].descrip+'</section>')
+              .addTo(lang4);
+            }
+
+
+        </script>
+        </div>
+      </article>
+
+
+      <article>
+        <div class = "text">
+          <h3> #5 Arabic </h3>
+          <p> <strong style= "color:#aa706a">274</strong> millions of speakers <br> <strong> Genus:</strong> Semitic </p>
+          <button id= "button5" class="play"> مرحبا اسمي </button>
+
+          <!-- audio 5 -->
+          <div id="audio5">
+              <p class="hellolang"> [marhaban asmi] </p>
+              <audio class="soundtrack" controls preload="auto">
+               <source src="audio/arabic.mp3" type="audio/mp3">
+               <source src="audio/arabic.ogg" type="audio/ogg">
+              </audio>
+            </div>
+
+          <div id="map5"></div>
+          <script src="js/lang.js"> </script>
+
+              <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+            <script>
+
+            let lang5 = L.map('map5').setView([0.000,14.390], .4);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/sabriveit/ckws7lfzo0rnv14p9rcnpgroo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Ficml2ZWl0IiwiYSI6ImNrdzNyMzRhZTBwdnEydm1tazU5cDk5MGEifQ.-3VtP4s1ThLRJm5ybeqBnA', {
+              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+              maxZoom: 15
+            }).addTo(lang5);
+
+            for ( let i = 0; i < places5.length; i++ ) {
+              L.marker( [ places5[i].latitude, places5[i].longitude ])
+              .bindPopup( '<h3>' + places5[i].placeName + '</h3>'+'<section>'+places5[i].descrip+'</section>')
+              .addTo(lang5);
+            }
+
+        </script>
+        </div>
+      </article>
+
+
+      <article>
+        <div class = "text">
+          <h3> #6 Bengali </h3>
+          <p> <strong style= "color:#aa706a">268</strong> millions of speakers <br> <strong> Genus:</strong> Indic </p>
+          <button id= "button6" class="play"> হ্যালো আমার নাম হচ্ছে </button>
+
+          <!-- audio 6 -->
+          <div id="audio6">
+              <p class="hellolang"> [Hyālō āmāra nāma hacchē] </p>
+              <audio class="soundtrack" controls preload="auto">
+               <source src="audio/bengali.mp3" type="audio/mp3">
+               <source src="audio/bengali.ogg" type="audio/ogg">
+              </audio>
+            </div>
+
+          <div id="map6"></div>
+          <script src="js/lang.js"> </script>
+
+              <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+            <script>
+
+            let lang6 = L.map('map6').setView([29.541,102.415], 2);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/sabriveit/ckws7lfzo0rnv14p9rcnpgroo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Ficml2ZWl0IiwiYSI6ImNrdzNyMzRhZTBwdnEydm1tazU5cDk5MGEifQ.-3VtP4s1ThLRJm5ybeqBnA', {
+              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+              maxZoom: 15
+            }).addTo(lang6);
+
+            for ( let i = 0; i < places6.length; i++ ) {
+              L.marker( [ places6[i].latitude, places6[i].longitude ])
+              .bindPopup( '<h3>' + places6[i].placeName + '</h3>'+'<section>'+places6[i].descrip+'</section>')
+              .addTo(lang6);
+            }
+        </script>
+        </div>
+      </article>
+
+
+      <article>
+        <div class = "text">
+          <h3> #7 French </h3>
+          <p> <strong style= "color:#aa706a">267</strong> millions of speakers <br> <strong> Genus:</strong> Romance  </p>
+          <button id= "button7"> Bonjour, je m'appelle </button>
+
+          <!-- audio 7 -->
+          <div id="audio7">
+              <p class="hellolang"> [bon-zhoor, zhuh mah-pel] </p>
+              <audio class="soundtrack" controls preload="auto">
+               <source src="audio/french.mp3" type="audio/mp3">
+               <source src="audio/french.ogg" type="audio/ogg">
+              </audio>
+            </div>
+
+          <div id="map7" class="play"></div>
+          <script src="js/lang.js"> </script>
+
+              <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+            <script>
+
+            let lang7 = L.map('map7').setView([0.000,14.390], .4);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/sabriveit/ckws7lfzo0rnv14p9rcnpgroo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Ficml2ZWl0IiwiYSI6ImNrdzNyMzRhZTBwdnEydm1tazU5cDk5MGEifQ.-3VtP4s1ThLRJm5ybeqBnA', {
+              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+              maxZoom: 15
+            }).addTo(lang7);
+
+            for ( let i = 0; i < places7.length; i++ ) {
+              L.marker( [ places7[i].latitude, places7[i].longitude ])
+              .bindPopup( '<h3>' + places7[i].placeName + '</h3>'+'<section>'+places7[i].descrip+'</section>')
+              .addTo(lang7);
+            }
+
+
+        </script>
+        </div>
+      </article>
+
+
+      <article>
+        <div class = "text">
+          <h3> #8 Russian </h3>
+          <p> <strong style= "color:#aa706a">258</strong> millions of speakers <br> <strong> Genus:</strong> Slavic  </p>
+          <button id= "button8" class="play"> Привет меня зовут </button>
+
+          <!-- audio 8 -->
+          <div id="audio8">
+              <p class="hellolang"> [privet menya zovut] </p>
+              <audio class="soundtrack" controls preload="auto">
+               <source src="audio/russian.mp3" type="audio/mp3">
+               <source src="audio/russian.ogg" type="audio/ogg">
+              </audio>
+            </div>
+
+          <div id="map8"></div>
+          <script src="js/lang.js"> </script>
+
+              <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+            <script>
+
+            let lang8 = L.map('map8').setView([30.691,69.027], .6);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/sabriveit/ckws7lfzo0rnv14p9rcnpgroo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Ficml2ZWl0IiwiYSI6ImNrdzNyMzRhZTBwdnEydm1tazU5cDk5MGEifQ.-3VtP4s1ThLRJm5ybeqBnA', {
+              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+              maxZoom: 15
+            }).addTo(lang8);
+
+            for ( let i = 0; i < places8.length; i++ ) {
+              L.marker( [ places8[i].latitude, places8[i].longitude ])
+              .bindPopup( '<h3>' + places8[i].placeName + '</h3>'+'<section>'+places8[i].descrip+'</section>')
+              .addTo(lang8);
+            }
+        </script>
+        </div>
+      </article>
+
+
+      <article>
+        <div class = "text">
+          <h3> #9 Portuguese </h3>
+          <p> <strong style= "color:#aa706a">258</strong> millions of speakers <br> <strong> Genus:</strong> Romance  </p>
+          <button id= "button9" class="play"> Olá meu nome é </button>
+
+          <!-- audio 9 -->
+          <div id="audio9">
+              <p class="hellolang"> [oh-lah mee nohm-e] </p>
+              <audio class="soundtrack" controls preload="auto">
+               <source src="audio/portuguese.mp3" type="audio/mp3">
+               <source src="audio/portuguese.ogg" type="audio/ogg">
+              </audio>
+            </div>
+
+          <div id="map9"></div>
+          <script src="js/lang.js"> </script>
+
+              <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+            <script>
+
+            let lang9 = L.map('map9').setView([0.000,14.390], .4);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/sabriveit/ckws7lfzo0rnv14p9rcnpgroo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Ficml2ZWl0IiwiYSI6ImNrdzNyMzRhZTBwdnEydm1tazU5cDk5MGEifQ.-3VtP4s1ThLRJm5ybeqBnA', {
+              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+              maxZoom: 15
+            }).addTo(lang9);
+
+            for ( let i = 0; i < places9.length; i++ ) {
+              L.marker( [ places9[i].latitude, places9[i].longitude ])
+              .bindPopup( '<h3>' + places9[i].placeName + '</h3>'+'<section>'+places9[i].descrip+'</section>')
+              .addTo(lang9);
+            }
+
+        </script>
+        </div>
+      </article>
+
+
+      <article>
+        <div class = "text">
+          <h3> #10 Urdu </h3>
+          <p> <strong style= "color:#aa706a">230</strong> millions of speakers <br> <strong> Genus:</strong> Indic  </p>
+          <button id= "button10" class="play"> ہیلو! میرا نام ہے </button>
+
+          <!-- audio 10 -->
+          <div id="audio10">
+              <p class="hellolang"> [he-alluk mera naam] </p>
+              <audio class="soundtrack" controls preload="auto">
+               <source src="audio/urdu.mp3" type="audio/mp3">
+               <source src="audio/urdu.ogg" type="audio/ogg">
+              </audio>
+            </div>
+
+          <div id="map10"></div>
+          <script src="js/lang.js"> </script>
+
+              <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+            <script>
+
+            let lang10 = L.map('map10').setView([29.541,102.415], 2);
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/sabriveit/ckws7lfzo0rnv14p9rcnpgroo/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2Ficml2ZWl0IiwiYSI6ImNrdzNyMzRhZTBwdnEydm1tazU5cDk5MGEifQ.-3VtP4s1ThLRJm5ybeqBnA', {
+              attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+              maxZoom: 15
+            }).addTo(lang10);
+
+            for ( let i = 0; i < places10.length; i++ ) {
+              L.marker( [ places10[i].latitude, places10[i].longitude ])
+              .bindPopup( '<h3>' + places10[i].placeName + '</h3>'+'<section>'+places10[i].descrip+'</section>')
+              .addTo(lang10);
+            }
+        </script>
+        </div>
+      </article>
+
+		</main>
+	</div>
+  <footer>
+  	<p>This page was created by Sabrina Veit using HTML, HTML5 audio controls, CSS, CSS Grid, JavaScript and Leaflet.</p>
+  </footer>
+
+
+  <script src="js/lang.js"></script>
+  <script src="js/places.js"></script>
+</body>
+</html>
