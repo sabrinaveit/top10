@@ -1,6 +1,3 @@
-var button = document.querySelector('button1','button2','button3','button4','button5','button6','button7','button8','button9','button10');
-var audio = document.querySelector('audio1', 'audio2', 'audio3', 'audio4', 'audio5', 'audio6', 'audio7', 'audio8', 'audio9', 'audio10');
-
 audio1.style.display = 'none';
 audio2.style.display = 'none';
 audio3.style.display = 'none';
