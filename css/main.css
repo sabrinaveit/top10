@@ -171,14 +171,12 @@ footer {
     text-align: center;
 }
 
-/* visited link */
-footer a:visited {
-  color: #aa706a;
-}
-
-footer a:hover {
-  color: #4B504D;
-  text-shadow: 1px 1px #fff;
+footer p {
+	display: table;
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+		width: 500px;
 }
 
 /* unvisited link */
@@ -186,19 +184,20 @@ a:link {
   color: #aa706a;
 }
 
-/* visited link */
+/* visited link*/
 a:visited {
   color: #aa706a;
 }
 
 /* mouse over link */
 a:hover {
-  color: #4B504D;
+	color: #4B504D;
+  text-shadow: 1px 1px #fff;
 }
 
-/*a:active {
+a:active {
   color: #4B504D;
-}*/
+}
 
 @media screen and (max-width: 890px) {
 	.grid{
