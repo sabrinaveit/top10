@@ -171,9 +171,19 @@ footer {
     text-align: center;
 }
 
+/* visited link */
+footer a:visited {
+  color: #aa706a;
+}
+
+footer a:hover {
+  color: #4B504D;
+  text-shadow: 1px 1px #fff;
+}
+
 /* unvisited link */
 a:link {
-  color: #4B504D;
+  color: #aa706a;
 }
 
 /* visited link */
@@ -183,13 +193,12 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: #bacac3;
+  color: #4B504D;
 }
 
-/* selected link */
-a:active {
-  color: blue;
-}
+/*a:active {
+  color: #4B504D;
+}*/
 
 @media screen and (max-width: 890px) {
 	.grid{
