@@ -171,6 +171,26 @@ footer {
     text-align: center;
 }
 
+/* unvisited link */
+a:link {
+  color: #4B504D;
+}
+
+/* visited link */
+a:visited {
+  color: #aa706a;
+}
+
+/* mouse over link */
+a:hover {
+  color: #bacac3;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
 @media screen and (max-width: 890px) {
 	.grid{
 		grid-template-columns: repeat(1,1fr);
